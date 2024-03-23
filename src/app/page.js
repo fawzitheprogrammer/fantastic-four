@@ -1,12 +1,12 @@
-
+import NavBar from "@/components/NavBar";
 
 
 // This file should hold all parent components
 function App() {
   return (
-    <div>
-      <h1>Start coding champ</h1>
-    </div>
+    <>
+      <NavBar />
+    </>
   );
 }
 
