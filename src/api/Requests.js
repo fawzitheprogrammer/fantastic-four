@@ -1,5 +1,4 @@
-const apiKey = 'YOU_KEY_HERE';
-
+const apiKey = 'f5fa5253da79f4678b4c4a199ddcc7f2';
 const requests = {
   requestPopular: `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=1`,
   requestTopRated: `https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}&language=en-US&page=1`,
@@ -7,5 +6,4 @@ const requests = {
   requestHorror: `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&language=en-US&query=horror&page=1&include_adult=false`,
   requestUpcoming: `https://api.themoviedb.org/3/movie/upcoming?api_key=${apiKey}&language=en-US&page=1`,
 };
-
 export default requests

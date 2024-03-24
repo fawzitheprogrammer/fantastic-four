@@ -1,4 +1,5 @@
 import React from 'react';
+
 function truncate(str, num) {
   if (str?.length > num) {
     return str.slice(0, num) + "...";
@@ -6,5 +7,6 @@ function truncate(str, num) {
     return str;
   }
 }
+
 
 export default truncate;
