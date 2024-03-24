@@ -1,3 +1,4 @@
+
 import { Route, Routes } from "react-router-dom";
 import React from "react";
 const NavBar = () => {
@@ -22,3 +23,4 @@ const NavBar = () => {
   );
 };
 export default NavBar;
+
