@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+
+
 export const content = [
   "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
   "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -17,4 +20,4 @@ export const theme = {
     }
   },
 };
-export const plugins = [require('tailwind-scrollbar-hide')];
+export const plugins = [require('tailwind-scrollbar-hide'), require("daisyui")];
