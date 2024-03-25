@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import requests from "../api/Request";
 import truncate from "../helper/truncate_string";
+import requests from '../api/Requests'
 
 const Main = () => {
   // A state to hold all movies fetched from API
@@ -14,8 +14,6 @@ const Main = () => {
       setMovies(response.data.results);
     });
   }, []);
-
-  // console.log(movie);
 
   return (
     <div className="w-full  h-[600px] text-white relative">

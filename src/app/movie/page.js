@@ -1,8 +1,8 @@
 'use client';
 import { useSearchParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
-import requests from "../../api/Request";
 import axios from "axios";
+import requests from '../../api/Requests'
 
 const SingleMovie = () => {
 

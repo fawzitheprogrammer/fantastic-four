@@ -42,7 +42,7 @@ const Row = ({ title, fetchUrl, rowID }) => {
         >
           {movies.map((item, id) =>
             item?.backdrop_path != null ? (
-              <Movie item={item} key={id }/>
+              <Movie item={item} key={id} />
             ) : (
               <div key={id}></div>
             )
