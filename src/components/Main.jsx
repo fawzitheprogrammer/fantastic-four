@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import truncate from "../helper/truncate_string";
-import requests from '../api/Requests'
+import requests from "../api/Requests";
 
 const Main = () => {
   // A state to hold all movies fetched from API
@@ -16,11 +16,11 @@ const Main = () => {
   }, []);
 
   return (
-    <div className="w-full  h-[600px] text-white relative">
+    <div className="w-full  h-[600px] text-white relative my-4 ">
       <div className="w-full h-full ">
         <div className="absolute w-full h-[600px] bg-gradient-to-r from-black"></div>
         <img
-          className="w-full h-full  object-cover  "
+          className="w-full h-full  object-cover "
           src={`https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`}
           alt={movie?.alt}
         />

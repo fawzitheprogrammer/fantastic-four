@@ -17,6 +17,7 @@ export const theme = {
       'primary-blue': '#0763DB',
       'vibrant-blue': '#21ABEC',
       'vibrant-orange': '#FF8C00',
+      'drawer-item-c': 'rgb(230, 231, 245)'
     }
   },
 };

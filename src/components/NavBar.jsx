@@ -8,17 +8,19 @@ const NavBar = () => {
   //
 
   return (
-    <div className="flex items-center justify-between p-8 w-full xl:w-[1380px] mx-auto">
+    <div className=" bg-white   w-full ">
       {/* Our website logo */}
-      <div className="flex flex-row-reverse items-center lg:flex-row">
-        <img
-          src="/logo.jpg"
-          alt="Logo"
-          className="w-[200px] md:w-[220px] lg:w[250px] xl:w-[300px]  px-4"
-        />
-        <CustomDrawer />
+      <div className="w-full xl:w-[1360px] mx-auto flex items-center justify-between p-4">
+        <div className="flex flex-row-reverse items-center lg:flex-row">
+          <img
+            src="/logo.jpg"
+            alt="Logo"
+            className="w-[200px] md:w-[220px] lg:w[250px] xl:w-[300px]  px-4"
+          />
+          <CustomDrawer />
+        </div>
+        <SearchBar />
       </div>
-      <SearchBar />
 
       {/* <div className="dropdown dropdown-hover">
         <div tabIndex={0} role="button" className="btn m-1">

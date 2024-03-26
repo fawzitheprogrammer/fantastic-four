@@ -12,3 +12,13 @@ body {
 #logo-title {
   font-family: "Bebas Neue", sans-serif;
 }
+
+.menu li>*:not(ul):not(.menu-title):not(details):active {
+  @apply bg-gray-100;
+}
+
+/* .menu li {
+  background-color: rgb(230, 231, 245);
+  margin: 2px 0;
+  border-radius: 5px;
+} */
