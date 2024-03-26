@@ -1,6 +1,6 @@
 import React from "react";
 import { IoMdColorPalette } from "react-icons/io";
-import {  HiOutlineFilm } from "react-icons/hi";
+import { HiHome, HiUserGroup, HiOutlineFilm } from "react-icons/hi";
 
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -29,6 +29,7 @@ export default function Genre() {
           <ol className="flex-wrap">
             {genre.map((fetchedGenre, index) => (
               <Link
+                key={index}
                 href={{
                   pathname: "/genre",
                   query: { title: fetchedGenre.name, id: fetchedGenre.id },
