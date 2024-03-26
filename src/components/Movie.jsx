@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import truncate from "../helper/truncate_string";
 import { FaHeart, FaRegHeart, FaStar } from "react-icons/fa";
 import Link from "next/link";
+import requests from "../api/Requests";
 
 const Movie = ({ item }) => {
   const [like, setLike] = useState(false);
@@ -17,39 +18,59 @@ const Movie = ({ item }) => {
           query: { title: item.title, id: item?.id },
         }}
       >
-        <div className="inline-block  bg-gray-200 m-2 rounded-lg">
-          <div className=" w-[200px]  lg:w-[200px] inline-block cursor-pointer relative">
-            <img
-              className="w-full h-auto inline-block rounded-t-lg "
-              src={`https://image.tmdb.org/t/p/w500/${item?.poster_path}`}
-              alt={item?.title}
-            />
-            <div className="absolute top-0 left-0 w-full h-full hover:bg-black/80 opacity-0 hover:opacity-100 text-white">
-              <p className="white-space-normal text-xs md:text-sm font-bold flex justify-center items-center h-full w-full text-center">
-                {item.title}
-                <p>
-                  {like ? (
-                    <FaHeart
-                      size={iconSize}
-                      className="absolute top-4 left-4 text-gray-300 "
-                    />
-                  ) : (
-                    <FaRegHeart
-                      size={iconSize}
-                      className="absolute top-4 left-4 text-gray-300 "
-                    />
-                  )}
+        <div class="inline-block m-2 mb-2 w-1/2 px-1 lg:p-2 mx-auto  sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 ">
+          <div class="rounded-lg bg-white shadow-lg">
+            <div className="  inline-block cursor-pointer relative">
+              <img
+                src={`${requests.baseImgUrl}${item.poster_path}`}
+                alt={item.title}
+                class="rounded-t-lg "
+              />
+              <div className="absolute top-0 left-0 w-full h-full hover:bg-black/80 opacity-0 hover:opacity-100 text-white">
+                <p className="white-space-normal text-xs md:text-sm font-bold flex justify-center items-center h-full w-full text-center">
+                  {item.title}
+                  <p>
+                    {like ? (
+                      <FaHeart
+                        size={iconSize}
+                        className="absolute top-4 left-4 text-gray-300 "
+                      />
+                    ) : (
+                      <FaRegHeart
+                        size={iconSize}
+                        className="absolute top-4 left-4 text-gray-300 "
+                      />
+                    )}
+                  </p>
                 </p>
-              </p>
+              </div>
             </div>
-          </div>
-          <div className="flex justify-between p-2">
-            <h3 className="text-dark-500 font-bold text-sm">
-              {truncate(item.title, 15)}
-            </h3>
-            <div className="text-black-500 flex justify-center">
-              <FaStar className="mt-[3px] mr-1 " color="#FF8C00" size={15} />
-              {item?.vote_average.toFixed(1)}
+            <div className="p-4">
+              <p className="break-words">
+                <h2 className="mb-2 text-lg font-semibold overflow-hidden text-ellipsis whitespace-nowrap">
+                  {item.title}
+                </h2>
+              </p>
+              <p className="mb-2 text-xs lg:text-sm text-gray-700">
+                Release Date: {item?.release_date}
+              </p>
+              <p className="mb-4 text-sm text-gray-700 flex ">
+                Rating:{" "}
+                <div className="flex ml-2">
+                  <FaStar
+                    className="mt-[3px] mr-1 "
+                    color="#FF8C00"
+                    size={15}
+                  />
+                  {item?.vote_average.toFixed(1)}
+                </div>
+              </p>
+              <button
+                href="#"
+                className="w-full rounded-lg bg-blue-500 px-4 py-2 text-center font-semibold text-white hover:bg-blue-600"
+              >
+                Details
+              </button>
             </div>
           </div>
         </div>

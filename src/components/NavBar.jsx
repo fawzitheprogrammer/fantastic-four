@@ -10,13 +10,15 @@ const NavBar = () => {
   return (
     <div className=" bg-white   w-full ">
       {/* Our website logo */}
-      <div className="w-full xl:w-[1360px] mx-auto flex items-center justify-between p-4">
-        <div className="flex flex-row-reverse items-center lg:flex-row">
-          <img
-            src="/logo.jpg"
-            alt="Logo"
-            className="w-[200px] md:w-[220px] lg:w[250px] xl:w-[300px]  px-4"
-          />
+      <div className="w-full xl:w-[1360px] mx-auto flex items-center justify-between	 p-4">
+        <div className="flex flex-row-reverse items-center  lg:flex-row w-fit b">
+          <a href="/">
+            <img
+              src="/logo.jpg"
+              alt="Logo"
+              className="w-[180px] md:w-[200px] lg:w[200px] xl:w-[250px]  ml-2 mr-2"
+            />
+          </a>
           <CustomDrawer />
         </div>
         <SearchBar />

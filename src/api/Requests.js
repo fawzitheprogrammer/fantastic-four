@@ -2,7 +2,7 @@ const apiKey = 'caf2d2376a53622b50ee54394777517d';
 
 const requests = {
   baseImgUrl: 'https://image.tmdb.org/t/p/w500',
-  'genres': `https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}`,
+  genres: `https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}`,
   requestPopular: `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=1`,
   requestTopRated: `https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}&language=en-US&page=1`,
   requestTrending: `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=2`,

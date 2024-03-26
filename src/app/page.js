@@ -8,7 +8,7 @@ import Home from '../pages/Home';
 // This file should hold all parent components
 function App() {
   return (
-    <div className="w-full xl:w-[1280px] mx-auto relative">
+    <div className="w-full xl:w-[1280px] mx-auto relative ">
       <Home />
     </div>
   );

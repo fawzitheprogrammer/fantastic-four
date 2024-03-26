@@ -1,8 +1,13 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
+
+:root{
+  background-color: rgb(242, 241, 246);}
 
 body {
   background-color: rgb(242, 241, 246);
@@ -16,6 +21,12 @@ body {
 .menu li>*:not(ul):not(.menu-title):not(details):active {
   @apply bg-gray-100;
 }
+
+.input{
+  background-color: white;
+}
+
+
 
 /* .menu li {
   background-color: rgb(230, 231, 245);
