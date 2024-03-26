@@ -26,7 +26,7 @@ const MovieSearched = ({ movie }) => {
             <p className="text-xs lg:text-lg md:text-sm xl:text-lg">
               Release date {movie.release_date}
             </p>
-            <p class="mb-4 text-sm text-gray-700 flex hidden">
+            <p class="mb-4 text-sm text-gray-700 lg:flex hidden">
               Rating:{" "}
               <div className="flex ml-2">
                 <FaStar className="mt-[3px] mr-1 " color="#FF8C00" size={15} />

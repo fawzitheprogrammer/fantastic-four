@@ -5,6 +5,8 @@ import axios from "axios";
 import requests from '../../api/Requests'
 import { resolve } from "styled-jsx/css";
 import truncate from "../../helper/truncate_string";
+import { FaHeart, FaRegHeart, FaStar } from "react-icons/fa";
+
 
 const SingleMovie = () => {
 
@@ -35,35 +37,43 @@ const SingleMovie = () => {
   }, [movieId]);
 
 
-  return <div>
-    <div className="w-full  h-[600px] text-white relative my-4 ">
-      <div className="w-full h-full ">
-        <div className="absolute w-full h-[600px] bg-gradient-to-r from-black"></div>
-        <div className="absolute w-full h-[600px] bg-gradient-to-l from-black"></div>
-        <img
-          className="w-full h-full  object-cover "
-          src={`https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`}
-          alt={movie?.alt}
-        />
+  return <div >
+    <div className="w-full  h-full text-black relative my-4 ">
 
 
-        <div className="flex relative bottom-[20%] mx-8 mt-10 lg:mt-0 xl:mt-0">
+      <div className="flex   mx-8 mt-10 lg:mt-0 xl:mt-0">
 
-          <div className="absolute flex-col lg:flex-row xl:flex-row md:flex w-full  bottom-[15%] p-4 md:p-8">
-            <img
-              className=" w-60 h-80  object-cover mr-4 rounded-lg "
-              src={`https://image.tmdb.org/t/p/w500/${movie?.backdrop_path}`}
-              alt={movie?.alt}
-            />
-            <div className="mr-4">
-              <h1 className="text-4xl md-text-5xl font-bold mb-2">{movie?.title}</h1>
-              <p className="text-gray-400 text-sm">
-                Released : {movie?.release_date}
-              </p>
-              <p className="w-full md:max-w-[70%] lg:max-w-[50%] xl:max-w[35%] text-xs xl:text-lg text-gray-200 ">
-                {truncate(movie?.overview, 200)}
-              </p>
-            </div>
+        <div className=" flex-col bottom-4 justify-center lg:flex-row xl:flex-row md:flex w-full   p-4 md:p-8">
+          <img
+            className=" w-60 h-80  object-cover mr-4 rounded-lg "
+            src={`https://image.tmdb.org/t/p/w500/${movie?.poster_path}`}
+            alt={movie?.alt}
+          />
+          <div className="mr-4">
+            <h1 className="text-m md-text-5xl font-bold mb-2 lg:flex text-3xl">{truncate(movie?.title, 30)}</h1>
+            <p className="text-gray-400 text-sm">
+              Released : {movie?.release_date}
+            </p>
+            <p className="w-full md:max-w-[70%] lg:max-w-[50%] xl:max-w[35%] text-xs xl:text-lg text-black ">
+              {truncate(movie?.overview, 200)}
+            </p>
+            <p className="flex">
+              Rating:
+              <div className="flex ml-2 text-black">
+                <FaStar className="mt-[3px] mr-1 " color="#FF8C00" size={15} />
+                {movie?.vote_average}
+              </div>
+            </p>
+            <p className="flex ">
+              <p className="mr-2 font-semibold">Language:</p>
+              <p>{movie.original_language}</p>
+            </p>
+            <p className="flex ">
+              <p className="mr-2 font-semibold">Vote Count:</p>
+              <p>{movie.vote_count}</p>
+            </p>
+
+
           </div>
         </div>
       </div>
